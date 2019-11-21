@@ -1,83 +1,33 @@
 ﻿using System;
 
-namespace ConsoleApp3
+namespace InClassWeek5
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int speedlimit = 35;
-            int speed = 42;
+          MyMath mathobject1 = new MyMath();
 
-            if (speed > speedlimit)
-            {
-                Console.WriteLine("SLOW NOW");
-            }
+            Console.WriteLine("The difference is " + mathobject1.subtractNumbers(33, 21));
+            Console.WriteLine("The sum is " + mathobject1.addNumbers(9, 10));
+            Console.WriteLine("The product is " + mathobject1.multiplyNumbers(33, 21));
+            Console.WriteLine("The quotient is " + mathobject1.dividenumbers(33, 21));
 
-            bool isTrue;
-            isTrue = true;
+            mathobject1.operand1 = 10;
+            mathobject1.operand2 = 11;
+            
 
-            int num1 = 14;
-            int num2 = 19;
-
-            if (num1 < num2)
-            {
-                Console.WriteLine("It is True!");
-            }
-
-            else
-
-            {
-                Console.WriteLine("It is False!");
-            }
-
-            Console.WriteLine("Input temperature in Fahrenheit: ");
-            double fahrenheit = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine();
-            double Celsius = (fahrenheit - 32d) * 5d / 9d;
-            Console.WriteLine("Temperature in Celsius is {0}: ",
-                Celsius); Console.ReadLine();
-
-            if (fahrenheit >= 90)
-                Console.WriteLine("It is hot");
-
-            if (fahrenheit <= 40)
-                Console.WriteLine("It is cold");
-
-            int counter = 1;
-            while (counter < 11)
-
-            {
-                Console.WriteLine(counter);
-                counter = counter + 1;
-            }
-
-            int counter = 60;
-            while (counter > 19)
-
-            {
-                Console.WriteLine(counter);
-                counter = counter - 1;
-            }
-
-            int counter = 10;
-            while (counter <= 20)
-            {
-                Console.WriteLine(counter);
-                counter = counter + 1;
-            }
-
-
-
-
-
-
-
-
-
-
-
+            int sum;
+            sum = mathobject1.addNumbers(22,45);
+            Console.WriteLine("The sum is " + sum);
+            Console.WriteLine("The sum is " + mathobject1.addNumbers(9,12,15));
 
         }
-        }
+
+
+
+      
+    }
+
+
 }
